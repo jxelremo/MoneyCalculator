@@ -6,9 +6,9 @@ public class MoneyCalculator {
         Currency dollar = new Currency("USD","American Dollar","$");
         Currency euro = new Currency("EUR","Euro","€");
         ExchangeRate rate = new ExchangeRate(euro, dollar, 1.20);
-        Money amount = new Money(100.9,dollar);
+        Money amount = new Money(100,euro);
 
-        System.out.println(MoneyExchanger.exchange(amount,rate).getAmount());
+        System.out.println(amount.getAmount()+euro.getSymbol()+" = "+MoneyExchanger.exchange(amount,rate).getAmount()+dollar.getSymbol());
     }
     
 }
